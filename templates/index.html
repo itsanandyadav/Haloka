@@ -1,0 +1,78 @@
+
+<html>
+  <head>
+      <title>Haloka</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+
+  </head>
+
+  <body>
+    <div class="title theme">
+      <h1 id="title">
+       View from the bot
+       </h1>
+    </div>
+
+    <div class="controls theme" >
+      <div class="btn theme">
+        <button class="button" id="button1" name="button" value='1' type="submit" >Right</button>
+        <button class="button" id="button2" name="button" value='2' type="submit" >Left </button>
+        <!-- <button class="button" id="button0" name="button" value='0' type="submit" >Stop </button> -->
+      </div>
+
+      <div class="vid">
+        <img src="{{ url_for('video_feed') }}">
+      </div>
+
+      <div class="btn theme">
+        <button class="button" id="button3" name="button" value='3' type="submit" >BWD</button>
+        <button class="button" id="button4" name="button" value='4' type="submit" >FWD</button>
+      </div>
+    </div>
+
+    <div class="foot theme">    </div>
+
+<!--Jquery Cdn -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+  var button_down = ('ontouchstart' in window ? 'touchstart' : 'mousedown');
+  var button_up = ('ontouchstart' in window ? 'touchend' : 'mouseup');
+
+  $("#button1, #button2, #button3, #button4").on(button_down,function(e)
+  {
+    // console.log('hello');
+    e.preventDefault();
+    $.ajax({
+      type:'POST',
+      url:'/',
+      data:{
+        value:$(this).val(),
+      },
+    })
+  });
+
+  $("#button1, #button2, #button3, #button4").on(button_up,function(e)
+ {
+    console.log('hello');
+    e.preventDefault();
+    $.ajax({
+      type:'POST',
+      url:'/',
+      data:{
+        value:"0",
+      },
+      // success:function() {alert('saved'); }
+    })
+  });
+
+</script>
+
+</body>
+</html>

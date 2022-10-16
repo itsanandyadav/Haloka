@@ -1,0 +1,141 @@
+
+html ,body {
+
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items:stretch;
+    justify-content:stretch;
+
+
+    -webkit-touch-callout: none; /* Safari to avoid text selection*/
+    -webkit-user-select: none; /* Chrome */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+
+}
+
+.form{
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items:stretch;
+    justify-content:stretch;
+}
+
+.title{
+background-color: rgb(159, 191, 197);
+height: 15%;
+text-align:center;
+text-justify:center;
+font-size: 14px;
+font-family: 'Times New Roman', Times, serif;
+}
+
+
+.foot{
+    background-color:rgb(159, 191, 197);
+    height: 5%;
+    text-align: center;
+    text-justify: auto;
+    font-size: 16px;
+    }
+
+.controls {
+display: flex;
+
+height:80%;
+/* width:60%;  */
+
+background-color:rgb(159, 191, 197);
+justify-content: center;
+align-items: stretch;
+justify-self: center;
+}
+
+.vid {
+
+    flex:10;
+    display: flex;
+    background-color:darkgrey;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    border: 10px solid rgb(10, 83, 105);
+    border-radius: 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+
+    }
+
+.fill img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+.btn{
+flex: 2;
+display: flex;
+flex-direction: column-reverse;
+background-color: rgb(159, 191, 197);
+justify-content: stretch;
+
+margin-bottom: 10px;
+
+}
+
+.left{
+    align-items: flex-end;
+}
+
+.right{
+    align-items: flex-start;
+}
+/* .button {
+border:2px solid;
+border-color: red;
+border-radius: 2px;
+height: 30%;
+width: 100%;
+font-size: 16px;
+text-align: center;
+justify-self: stretch;
+
+} */
+
+.button {
+
+    height:20%;
+    width:100%;
+    background-color:rgb(99, 199, 212);
+    font-size: 20px ;
+    font-weight: bold;
+    text-align: center;
+    color:black;
+    box-shadow: 0 1px rgb(95, 154, 161);
+    cursor: pointer;
+
+    border:2px solid;
+    border-color: slategrey;
+    border-radius: 5px;
+
+    }
+
+    .button:hover {
+        background-color: rgb(172, 220, 226);
+    }
+
+    .button:active {
+        background-color:rgb(189, 236, 230);
+        box-shadow: 0 1px rgb(95, 154, 161);
+        transform: translateY(2px);
+      }
